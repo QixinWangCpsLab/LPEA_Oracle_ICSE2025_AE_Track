@@ -324,8 +324,8 @@ bug_group = [
     {
         'relative_path': "/stable_baselines3/td3/td3.py",
         'lineno': -1,  # no use
-        'original_lines': ['if self._n_updates %% self.policy_delay == 0:'],
-        'injected_lines': ['if self._n_updates %% 1 == 0:'],
+        'original_lines': ['if self._n_updates % self.policy_delay == 0:'],
+        'injected_lines': ['if self._n_updates % 1 == 0:'],
         'realife_bug': False,
         'description': "Updating network Bugs: Disabling delay update",
         'category': "Updating network Bugs",
